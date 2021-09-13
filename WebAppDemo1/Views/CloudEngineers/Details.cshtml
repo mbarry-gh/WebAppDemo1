@@ -1,0 +1,30 @@
+﻿@model WebAppDemo1.Models.CloudEngineer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CloudEngineer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CEName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CEName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CELocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CELocation)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CEID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

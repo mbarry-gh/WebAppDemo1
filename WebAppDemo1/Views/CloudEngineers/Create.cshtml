@@ -1,0 +1,38 @@
+﻿@model WebAppDemo1.Models.CloudEngineer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CloudEngineer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CEName" class="control-label"></label>
+                <input asp-for="CEName" class="form-control" />
+                <span asp-validation-for="CEName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CELocation" class="control-label"></label>
+                <input asp-for="CELocation" class="form-control" />
+                <span asp-validation-for="CELocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
